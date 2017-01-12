@@ -1,0 +1,37 @@
+{% extends "::layout/layout.html.twig" %}
+{% block title %}Musée du Louvre - Horaires/Tarifs{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="btn-group btn-group-justified">
+                    <a href="{{ path('louvre_horaires') }}" class="btn btn-info">Horaires</a>
+                    <a href="{{ path('louvre_tarif') }}" class="btn btn-success">Tarifs</a>
+                </div>
+            </div>
+        </div>
+        <h1><u>Tarifs</u></h1>
+        <ul>
+            <li>Tarif normal à partir 12 ans à 16€</li>
+            <li>Tarif « enfant » à partir de 4 ans et jusqu’à 12 ans,
+                à 8 € (l’entrée est gratuite pour les enfants de moins de 4 ans)</li>
+            <li>Tarif « senior » à partir de 60 ans pour 12€</li>
+            <li>Tarif « réduit » de 10 € accordé dans certaines conditions
+                (étudiant, employé du musée, d’un service du Ministère de la Culture,
+                militaire…)</li>
+            <li>Tarif « famille » qui permet de faire entrer 2 adultes et
+                2 enfants ayant le même nom de famille pour 35 €</li>
+        </ul>
+        <p><strong>Billet valable le jour même</strong>, pour le musée du Louvre (collections permanentes et expositions temporaires) et le musée Eugène-Delacroix.</p>
+
+
+
+        <p><strong>Gratuit pour tous le 14 juillet.</strong> Les Nocturnes du vendredi, à partir de 18h, accès gratuit aux collections permanentes accordé aux jeunes de moins de 26 ans, quelle que soit leur nationalité, sur présentation d'un justificatif.</p>
+
+        <h3>Moyens de paiement</h3>
+        <p>Seuls les paiements en euros sont acceptés. Vous pouvez effectuer votre règlement en espèce, carte bancaire, chèque bancaire ou chèque vacances (ANCV) aux caisses du musée. A nos distributeurs automatiques, seules les cartes bancaires sont admises.</p>
+
+        <!-- /.container -->
+    </div>
+{% endblock %}
+

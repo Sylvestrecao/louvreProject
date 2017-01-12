@@ -1,0 +1,57 @@
+louvre_homepage:
+    path:     /
+    defaults: { _controller: LouvreBundle:Louvre:index }
+
+louvre_horaires:
+    path:     /horaires
+    defaults: { _controller: LouvreBundle:Louvre:horaires }
+
+louvre_tarif:
+    path:     /tarif
+    defaults: { _controller: LouvreBundle:Louvre:tarif }
+
+louvre_billeterie:
+    path:     /billeterie
+    defaults: { _controller: LouvreBundle:Louvre:billeterie }
+
+louvre_detail:
+    path:     /detail/{id}
+    defaults: { _controller: LouvreBundle:Louvre:detail }
+
+
+louvre_ajouter:
+    path:     /ajouter/{id}
+    defaults: { _controller: LouvreBundle:Louvre:ajouter }
+
+louvre_panier:
+    path:     /panier
+    defaults: { _controller: LouvreBundle:Louvre:panier }
+
+louvre_coordonnees:
+    path:     /coordonnees
+    defaults: { _controller: LouvreBundle:Louvre:coordonnees }
+
+louvre_select_paiement:
+    path:     /paiement_select
+    defaults: { _controller: LouvreBundle:Louvre:paiementselect }
+
+louvre_success_paiement_stripe:
+    path:     /stripe_paiement_success
+    defaults: { _controller: LouvreBundle:Louvre:successstripe }
+
+louvre_paiement:
+    path:     /paiement
+    defaults: { _controller: LouvreBundle:Louvre:paiement }
+
+louvre_success_paiement:
+    path:     /paiement_success
+    defaults: { _controller: LouvreBundle:Louvre:success }
+
+
+louvre_contact:
+    path:     /contact
+    defaults: { _controller: LouvreBundle:Louvre:contact }
+
+louvre_pdf:
+    path:     /pdf/{token}
+    defaults: { _controller: LouvreBundle:Louvre:pdf }

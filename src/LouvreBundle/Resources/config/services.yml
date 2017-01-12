@@ -1,0 +1,21 @@
+services:
+  quantite_limite:
+    class: LouvreBundle\Validator\QuantitemaxValidator
+    arguments:
+      - "@doctrine.orm.entity_manager"
+    tags:
+      - { name: validator.constraint_validator, alias: louvre_limite}
+
+  insertData:
+    class: LouvreBundle\Services\InsertData
+    arguments:
+      - "@doctrine.orm.entity_manager"
+
+  sendMail:
+    class: LouvreBundle\Services\SendMail
+    arguments: ['@mailer', '@templating']
+
+  createPdf:
+    class: LouvreBundle\Services\CreatePdf
+    arguments:
+      - "@templating"

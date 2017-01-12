@@ -1,0 +1,95 @@
+body {
+    padding-top: 70px;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+fieldset{
+    background-color: #ecf0f1;
+    padding: 15px;
+}
+.info{
+    background-color: #ecf0f1;
+    margin-top: 15px;
+    padding: 15px;
+}
+#pratique{
+    background-color: #fff;
+}
+
+.produits{
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 200px;
+    background-color: #ecf0f1;
+    box-shadow: 1px 1px 1px 1px #656565;
+}
+.produits h3{
+    text-align: center;
+    position: relative;
+    top: 10px;
+    font-size: 21px;
+}
+.retour{
+    clear: both;
+}
+
+
+@media (max-width: 992px) {
+    #panier
+    {
+        margin-top: 6%;
+    }
+    #box-facebook
+    {
+        margin-top: 6%;
+    }
+}
+
+.rs-box{
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px;
+}

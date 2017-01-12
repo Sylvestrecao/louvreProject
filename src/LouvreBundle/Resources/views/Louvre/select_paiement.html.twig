@@ -1,0 +1,78 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+    <div class="container">
+        <h2>Choisissez un moyen de paiement</h2>
+
+        <ul class="breadcrumb">
+            <li><a href="{{ path('louvre_homepage') }}"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+            <li><a href="{{ path('louvre_billeterie') }}"><span class="glyphicon glyphicon-list-alt"></span> Sélection du billet</a></li>
+            <li><a href="{{ path('louvre_detail', { id : produit.id }) }}"><span class="glyphicon glyphicon-pencil"></span> Informations complémentaires</a></li>
+            <li><a href="{{ path('louvre_panier') }}"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a></li>
+            <li><a href="{{ path('louvre_coordonnees') }}"><span class="glyphicon glyphicon-user"></span> Coordonnées</a></li>
+            <li class="active"><span class="glyphicon glyphicon-euro"></span> Moyen de paiement</li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center"><span class="glyphicon glyphicon-shopping-cart"></span> Votre Panier</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="text-info" style="text-decoration: underline;">Musée du Louvre</p>
+                        <p>Type de billet : {{ panier.type }}</p>
+                        <p>{{ panier.produit }}</p>
+                        <p>Date de visite : <strong>{{ panier.date_reservation|date("d/m/Y") }}</strong></p>
+                        <p> {% if panier.quantite > 1 %}
+                                Nombre de billets : {{ panier.quantite }}
+                            {% else %}
+                                Nombre de billet : {{ panier.quantite }}
+                            {% endif %}
+                        </p>
+                        <p class="text-danger">Prix Total : {{ panier.amount }} €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">Choisissez votre moyen de paiement</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-6 text-center">
+                                <p>Je payes avec Paypal</p>
+                                <img src="{{ asset('img/paypal-logo.jpg') }}" style="margin-bottom: 10%;"/>
+                                <div style="clear: both;"></div>
+                                <a href="{{ path('louvre_paiement') }}" class="stripe-button-el">
+                                    <span style="display: block; min-height: 30px;">Payer avec Paypal</span>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-6 text-center">
+                              <p>Je payes avec Stripe</p>
+                                <img src="{{ asset('img/stripe-logo.jpg') }}" style="margin-bottom: 10%;"/>
+                                <form action="{{ path('louvre_success_paiement_stripe') }}" method="POST">
+                                    <script
+                                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                            data-image="http://louvrefrance.esy.es/web/img/louvre-logo.jpg"
+                                            data-description="Billet de visite du Louvre"
+                                            data-key="pk_test_XSkH5Blvqmzhz9Ut0CXPmczX"
+                                            data-locale="fr"
+                                            data-label="Payer avec Stripe"
+                                            data-name="Musée du Louvre"
+                                            data-email="{{ panier.email }}"
+                                            data-allow-remember-me="false"
+                                            data-amount="{{ panier.amount * 100 }}"
+                                            data-currency="eur">
+                                    </script>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+

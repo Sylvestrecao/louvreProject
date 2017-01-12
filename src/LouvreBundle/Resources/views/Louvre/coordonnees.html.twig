@@ -1,0 +1,95 @@
+{% extends "::layout/layout.html.twig" %}
+{% block title %}Musée du Louvre - Coordonnees{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1>Vos coordonnées</h1><br />
+          <ul class="breadcrumb">
+            <li><a href="{{ path('louvre_homepage') }}"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+            <li><a href="{{ path('louvre_billeterie') }}"><span class="glyphicon glyphicon-list-alt"></span> Sélection du billet</a></li>
+            <li><a href="{{ path('louvre_detail', { id : produit.id }) }}"><span class="glyphicon glyphicon-pencil"></span> Informations complémentaires</a></li>
+            <li><a href="{{ path('louvre_panier') }}"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a></li>
+            <li class="active"><span class="glyphicon glyphicon-user"></span> Coordonnées</li>
+          </ul>
+        <h4><u>Renseigner vos coordonnées</u></h4><br />
+
+        <div class="row">
+            <div class="col-md-9">
+                {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+                <fieldset>
+                    {{ form_errors(form) }}
+                    <div class="form-group">
+                        {{ form_label(form.nom, "Nom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.nom) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder':'Entrer votre nom'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.prenom, "Prénom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.prenom) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder':'Entrer votre prénom'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.pays, "Pays", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.pays) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.pays, {'attr': {'class': 'datepicker form-control'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.birthday, "Date de naissance (JJ/MM/AAAA)", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.birthday) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.birthday, {'attr': {'class': 'form-control', 'placeholder':'JJ/MM/AAAA'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        {{ form_label(form.mail, "Email", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.mail) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.mail, {'attr': {'class': 'form-control', 'placeholder':'Entrer votre adresse email'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <a href="{{ path('louvre_panier') }}" class="btn btn-info">Retour au panier</a>
+                            {{ form_widget(form.Valider, {'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                    </div>
+                    {{ form_rest(form) }}
+                </fieldset>
+                {{ form_end(form) }}
+            </div>
+
+            <div class="col-md-3">
+                <div class="panel panel-warning" id="panier">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-shopping-cart"></span> Votre Panier</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="text-info" style="text-decoration: underline;">Musée du Louvre</p>
+                        <p>Type de billet : {{ panier.type }}</p>
+                        <p>{{ panier.produit }}</p>
+                        <p>Date de visite : <strong>{{ panier.date_reservation|date("d/m/Y") }}</strong></p>
+                        <p> {% if panier.quantite > 1 %}
+                                Nombre de billets : {{ panier.quantite }}
+                            {% else %}
+                                Nombre de billet : {{ panier.quantite }}
+                            {% endif %}
+                        </p>
+                        <p class="text-danger">Prix Total : {{ panier.amount }} €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

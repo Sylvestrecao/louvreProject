@@ -1,0 +1,46 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+    <div class="container">
+    	<div class="alert alert-dismissible alert-info" id="success" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Bravo !</strong> Votre achat a été effectué avec succès .
+        </div>
+        <h1>Paiement réussi</h1>
+
+        <h3>Votre achat a été effectué avec succès !</h3>
+        <p>Vous pouvez directement télécharger votre billet au format pdf sur ce lien : 
+        	<a href="{{ path('louvre_pdf', { 'token' : panier.token }) }}"> Votre billet</a>
+        </p>
+
+		<div class="row">
+            <div class="col-md-6">
+                <div class="rs-box text-center">
+                    <h3>Je tweet</h3>
+                    <img src="{{ asset('img/twitter-logo.jpg') }}" alt="logo-twitter"/>
+                        <p>Je tweet pour annoncer ma prochaine visite au Louvre à mes amis.</p>
+                        <p>
+                            <a href="https://twitter.com/intent/tweet?text=Je visites bientôt le Louvre !&url=http://louvrefrance.esy.es/" target="_blank"
+                            class="btn btn-info">Tweet</a>
+                        </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="rs-box text-center" id="box-facebook">
+                    <h3>Je poste un message</h3>
+                    <img src="{{ asset('img/facebook-logo.jpg') }}" alt="logo-facebook"/>
+                    <p>Je poste un message pour annoncer ma prochaine visite au Louvre à mes amis.</p>
+                    <p><a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.3%2Fdialog%2Fshare%3Fredirect_uri%3Dhttps%253A%252F%252Fwww.facebook.com%252Fdialog%252Freturn%252Fclose%26display%3Dpopup%26href%3Dhttps%253A%252F%252Ffr-fr.facebook.com%252Fmuseedulouvre%252F%26ref%3Dplugin%26client_id%3D966242223397117%26ret%3Dlogin&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Freturn%2Fclose%3F%23_%3D_&display=popup&locale=fr_FR" target="_blank" class="btn btn-primary">Poster</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+    $(function(){
+        $("#success").fadeIn(2000);
+    })
+</script>
+{% endblock %}

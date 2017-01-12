@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img src="http://louvrefrance.esy.es/web/img/louvre-logo.jpg" alt="logo" width="500"/><br />
+	
+	Bonjour  {{ panier.nom }} {{ panier.prenom }}.  <br /><br />
+
+	Vous avez réservé un billet "{{ panier.type }}", au {{ panier.produit }}.<br />
+	Date de la visite : {{ panier.date_reservation|date('d/m/Y') }}. <br />
+
+</body>
+</html>
+

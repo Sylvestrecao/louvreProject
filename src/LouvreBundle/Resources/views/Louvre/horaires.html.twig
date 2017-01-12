@@ -1,0 +1,115 @@
+{% extends "::layout/layout.html.twig" %}
+{% block title %}Musée du Louvre - Horaires/Tarifs{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="btn-group btn-group-justified">
+                    <a href="{{ path('louvre_horaires') }}" class="btn btn-info">Horaires</a>
+                    <a href="{{ path('louvre_tarif') }}" class="btn btn-success">Tarifs</a>
+                </div>
+            </div>
+        </div>
+        <h1><u>Horaires</u></h1>
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12">
+                <h3>Ouverture : </h3>
+                <ul>
+                    <li>Le musée est ouvert tous les jours de 9h à 18h excepté le mardi.
+                        (Fermeture des salles à partir de 17h30.)</li>
+                    <li>Le musée est ouvert en nocturne jusqu'à 21h45 le mercredi et le vendredi.
+                        (Fermeture des salles à partir de 21h30.)</li>
+                </ul>
+            </div>
+            <div class="col-lg-12 col-md-12">
+                <h4>Accès :</h4>
+                <ul>
+                    <li><strong>Les accès par la Pyramide et la galerie du Carrousel</strong> : ouvert tous les jours sauf le mardi, de 9h à 19h30 et jusqu'à 22h le mercredi et le vendredi.</li>
+                    <li><strong>Passage Richelieu</strong> : ouvert tous les jours, sauf le mardi, de 9h</strong> à 17h30 et jusqu’à 18h30 le mercredi et le vendredi.</li>
+                    <li><strong>Porte des Lions</strong> : en raison de contraintes techniques, cet accès est fermé.</li>
+                    <li><strong>Accès le dimanche :
+                            Chaque premier dimanche des mois d'octobre à mars, l'entrée au musée du Louvre est gratuite pour tous les visiteurs.</strong></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <h2>Jours fériés </h2>
+        <p>En 2016, le musée du Louvre vous accueille les jours fériés suivants </p>
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr class="info">
+                <th>Jours fériés en 2016</th>
+                <th class="text-center">Musée ouvert de 9h à 18h*</th>
+                <th class="text-center">Musée fermé</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Dimanche 27 mars </td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Lundi 28 mars</td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dimanche 1er mai</td>
+                <td></td>
+                <td class="text-center danger">X</td>
+            </tr>
+            <tr>
+                <td>Jeudi 5 mai</td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dimanche 8 mai</td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dimanche15 mai</td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Lundi 16 mai</td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Jeudi 14 juillet</td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Lundi 15 août</td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mardi 1er novembre</td>
+                <td></td>
+                <td class="text-center danger">X</td>
+            </tr>
+            <tr>
+                <td>Vendredi 11 novembre</td>
+                <td class="text-center success">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dimanche 25 décembre</td>
+                <td></td>
+                <td class="text-center danger">X</td>
+            </tr>
+            </tbody>
+        </table>
+        <p><strong>* L'évacuation des salles débute à 17h30.</strong></p>
+    </div>
+{% endblock %}
+

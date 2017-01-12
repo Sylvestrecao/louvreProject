@@ -1,0 +1,26 @@
+{% extends "::layout/layout.html.twig" %}
+{% block title %}Musée du Louvre - Billeterie{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.css"
+          xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"/>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1>Billeterie Musée du Louvre</h1>
+        {% for produit in produits %}
+        <div class="col-md-5 produits">
+            <a href="{{ path('louvre_detail', { id : produit.id }) }}"><h3>{{ produit.description }}</h3></a>
+        </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.fr.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.custom.js') }}"></script>
+{% endblock %}
+

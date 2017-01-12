@@ -1,0 +1,47 @@
+{% extends "::layout/layout.html.twig" %}
+{% block title %}Musée du Louvre - Panier{% endblock %}
+{% block body %}
+<div class="container">
+    <h1>Votre panier</h1><br />
+       <ul class="breadcrumb">
+        <li><a href="{{ path('louvre_homepage') }}"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+        <li><a href="{{ path('louvre_billeterie') }}"><span class="glyphicon glyphicon-list-alt"></span> Sélection du billet</a></li>
+        <li><a href="{{ path('louvre_detail', { 'id' : produit.id }) }}"><span class="glyphicon glyphicon-pencil"></span> Informations complémentaires</a></li>
+        <li class="active"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</li>
+    </ul>
+      <h4><u>Vérifier votre commande</u></h4><br />
+
+  <div class="row">
+      <div class="col-md-3">
+          <p class="text-justify"><span style="color:red;">Musée du Louvre</span> <br />
+              Type de billet : {{ panier.type }} <br />
+              <strong>{{ produit.nom }}</strong> <br />
+              Date de visite : {{ panier.date_reservation|date("d/m/Y") }}
+          </p>
+      </div>
+
+      <div class="col-md-2">
+          <label>Quantité</label>
+          <p>{{ panier.quantite }}</p>
+      </div>
+      <div class="col-md-2">
+          <label for="date">Prix Unitaire</label>
+          <p>{{ panier.prix }} €</p>
+      </div>
+      <div class="col-md-2">
+          <label for="date">Montant Total</label>
+          <p>{{ panier.amount }} €</p>
+      </div>
+    
+  </div>
+ 
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+            <a href="{{ path('louvre_detail', { 'id' : produit.id }) }}" class="btn btn-info">Retour</a>
+            <a href="{{ path('louvre_coordonnees') }}" class="btn btn-primary">Valider</a>
+        </div>
+    </div>
+
+{% endblock %}
+
+

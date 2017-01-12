@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Billet</title>
+<body>
+	<img src="http://louvrefrance.esy.es/web/img/louvre-logo.jpg"/>
+	<style type="text/css">
+		.content{
+			font-size: 5mm;
+		}
+		.footer{
+			margin-top: 100mm;
+		}
+		.barcode{
+			margin-left: 50mm;
+		}
+
+	</style>
+	<h1>Billet Musée du Louvre</h1>
+	<p class="content">
+		Type de billet : {{ panier.type }}<br />
+		{{ panier.produit }}<br />
+		<strong>Date de visite : {{ panier.date_reservation|date('d/m/Y') }}</strong><br />
+		Quantité : {{ panier.quantite }} <br />
+		<strong>Prix total : {{ panier.amount }} €</strong>
+	</p>
+
+<br /><br /><br />
+
+	<qrcode value="{{ panier.token }}" style="width: 40mm; background-color: white; color: black;"></qrcode>
+
+	<div class="barcode"><barcode type="C93" value="{{ panier.token }}" label="label" style="width:30mm; height:10mm; width: 40mm; color: black; font-size: 4mm"></barcode>
+	</div>
+
+	<p class="footer">
+		Si vous avez commandé plusieurs exemplaires de ce billet, celui-ci vous permettra de
+		rentrer dans le musée autant de fois que la quantité indiquée.
+	</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "::layout/layout.html.twig" %}
+{% block title %}Erreur : {{ status_text }}{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1>Oops! Une erreur s'est produite durant le chargement de la page</h1>
+
+        <h2>Notre application a retourné une erreur {{ status_code }}.</h2>
+    </div>
+
+{% endblock %}

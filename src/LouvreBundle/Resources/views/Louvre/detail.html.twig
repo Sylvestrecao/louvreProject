@@ -1,0 +1,91 @@
+{% extends "::layout/layout.html.twig" %}
+{% block title %}Musée du Louvre - Billeterie{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.css"
+          xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"/>
+{% endblock %}
+{% block body %}
+  <div class="container">
+    <h1>Billeterie Musée du Louvre</h1> 
+      <ul class="breadcrumb">
+        <li><a href="{{ path('louvre_homepage') }}"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+        <li><a href="{{ path('louvre_billeterie') }}"><span class="glyphicon glyphicon-list-alt"></span> Sélection du billet</a></li>
+        <li class="active"><span class="glyphicon glyphicon-pencil"></span> Informations complémentaires</li>
+      </ul>
+
+    {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+        <fieldset>
+        {{ form_errors(form) }}
+        <div class="form-group">
+            {{ form_label(form.jour, "Date", {'label_attr': {'class': 'col-sm-2'}}) }}
+            <div class="col-sm-10">
+                {{ form_errors(form.jour) }}
+                {{ form_widget(form.jour, {'attr': {'class': 'datepicker form-control', 'onchange': 'calculMontant()'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="billet">Type de billet <sup>(1)</sup></label>
+            <div class="col-sm-10">
+                {{ form_widget(form.type, {'attr': {'class': 'form-control selectOption', 'onchange': 'calculMontant()'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="tarif">Tarif <sup>(2)</sup></label>
+            <div class="col-sm-10">
+                {{ form_errors(form.produit) }}
+                {{ form_widget(form.produit, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+            <input type="hidden" name="prixUnitaire" id="prixUnitaire" value="{{ produit.prix }}">
+        <div class="form-group">
+            {{ form_label(form.quantite, "Quantité", {'label_attr': {'class': 'col-sm-2'}}) }}
+            <div class="col-sm-10">
+                {{ form_errors(form.quantite) }}
+                {{ form_widget(form.quantite, {'attr': {'class': 'form-control', 'onchange': 'calculMontant()'}}) }}
+            </div>
+        </div>
+         <div class="form-group">
+            <label class="col-sm-2 control-label">Montant Total</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="montant" id="montant" readonly="readonly"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            {{ form_widget(form.Valider, {'attr': {'class': 'btn btn-primary'}}) }}
+            </div>
+        </div>
+        {{ form_rest(form) }}
+        </fieldset>
+        {{ form_end(form) }}
+      <p style="margin-top: 10px;"><sup>(1)</sup> Vous ne pouvez plus commander de billet de type journée <strong>une fois 14h passées</strong>.</p>
+      <p><sup>(2)</sup> Pour bénéficier des tarifs spéciaux, un justificatif vous sera demandé à l'entrée du musée.</p>
+  </div>    
+  
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.fr.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.custom.js') }}"></script>
+    <script type="text/javascript">
+        function calculMontant(){
+            var typeBillet = $('.selectOption').val();
+            var prixUnitaire = $('#prixUnitaire').val();
+            var qte = $('#commandes_quantite').val();
+            var montantTotal = prixUnitaire * qte;
+            $('#montant').val(montantTotal + ' €');
+
+            if(typeBillet == 'Demi-Journée')
+            {
+                $('#montant').val(montantTotal / 2  + ' €');
+            }
+        }
+        calculMontant();
+    </script>
+{% endblock %}
+
