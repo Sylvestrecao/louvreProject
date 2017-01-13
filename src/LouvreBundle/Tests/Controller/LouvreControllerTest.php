@@ -75,14 +75,14 @@ class LouvreControllerTest extends WebTestCase
         );
     }
 
-    public function testRedirect()
+    /*public function testRedirect()
     {
         $client = static::createClient();
         $client->request('GET', '/panier');
         $this->assertTrue(
             $client->getResponse()->isRedirect('/')
         );
-    }
+    }*/
     /**
      * @dataProvider urlProvider
      */
@@ -100,8 +100,8 @@ class LouvreControllerTest extends WebTestCase
             array('/'),
             array('/horaires'),
             array('/tarif'),
-            array('/billeterie'),
-            array('/pdf/{token}'),
+            //array('/billeterie'),
+            //array('/pdf/{token}'),
             //array('/panier'),
             //array('/coordonnees'),
             //array('/paiement'),
