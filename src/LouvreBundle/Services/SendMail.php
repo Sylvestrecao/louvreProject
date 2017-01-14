@@ -24,7 +24,7 @@ class SendMail
         $panier = $session->get('panier');
         
         $message = Swift_Message::newInstance()
-            ->attach(Swift_Attachment::fromPath(__DIR__ . '/Billet/Billet.pdf'))
+            ->attach(Swift_Attachment::fromPath(__DIR__ . 'Billet/Billet.pdf'))
             ->setSubject('Votre billet de visite')
             ->setFrom('louvre@sylvestre-cao.fr')
             ->setTo($panier['email'])
