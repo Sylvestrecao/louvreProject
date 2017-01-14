@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7cc146bf-fbfd-4d86-82e7-99b636bd896c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LouvreBundle/Controller/LouvreController.php" afterPath="$PROJECT_DIR$/src/LouvreBundle/Controller/LouvreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdf.html.twig" afterPath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdf.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdfmail.html.twig" afterPath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdfmail.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/select_paiement.html.twig" afterPath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/select_paiement.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/shop-homepage.css" afterPath="$PROJECT_DIR$/web/css/shop-homepage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LouvreBundle/Services/SendMail.php" afterPath="$PROJECT_DIR$/src/LouvreBundle/Services/SendMail.php" />
     </list>
     <ignored path="louvreProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,14 +25,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LouvreController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LouvreController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Controller/LouvreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="-623">
               <caret line="243" column="65" selection-start-line="243" selection-start-column="65" selection-end-line="243" selection-end-column="65" />
               <folding>
                 <element signature="e#43#75#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreatePdf.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Services/CreatePdf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendMail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Services/SendMail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,8 +83,6 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
-        <option value="$PROJECT_DIR$/src/LouvreBundle/Services/CreatePdf.php" />
-        <option value="$PROJECT_DIR$/src/LouvreBundle/Services/SendMail.php" />
         <option value="$PROJECT_DIR$/src/LouvreBundle/Entity/Clients.php" />
         <option value="$PROJECT_DIR$/src/LouvreBundle/Validator/BirthdayValidator.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -77,6 +91,8 @@
         <option value="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdf.html.twig" />
         <option value="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdfmail.html.twig" />
         <option value="$PROJECT_DIR$/web/css/shop-homepage.css" />
+        <option value="$PROJECT_DIR$/src/LouvreBundle/Services/SendMail.php" />
+        <option value="$PROJECT_DIR$/src/LouvreBundle/Services/CreatePdf.php" />
       </list>
     </option>
   </component>
@@ -425,12 +441,12 @@
       <updated>1484234241328</updated>
       <workItem from="1484234242552" duration="3908000" />
       <workItem from="1484391167068" duration="18336000" />
-      <workItem from="1484426467916" duration="590000" />
+      <workItem from="1484426467916" duration="1056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22834000" />
+    <option name="totallyTimeSpent" value="23300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -515,7 +531,7 @@
         <state relative-caret-position="280">
           <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <element signature="e#39#71#0#PHP" expanded="true" />
+            <element signature="e#39#71#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -525,7 +541,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
+            <element signature="e#7#52#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,7 +721,7 @@
         <state relative-caret-position="112">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#39#71#0#PHP" expanded="true" />
+            <element signature="e#39#71#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -738,7 +754,7 @@
         <state relative-caret-position="280">
           <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <element signature="e#39#71#0#PHP" expanded="true" />
+            <element signature="e#39#71#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,28 +807,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Services/CreatePdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Services/SendMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app_dev.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
           <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
+            <element signature="e#7#52#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -837,11 +837,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Controller/LouvreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="-623">
           <caret line="243" column="65" selection-start-line="243" selection-start-column="65" selection-end-line="243" selection-end-column="65" />
           <folding>
             <element signature="e#43#75#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Services/SendMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Services/CreatePdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
