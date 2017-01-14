@@ -24,7 +24,7 @@ class CreatePdf
         $html2pdf->pdf->SetTitle('Votre billet de visite');
         $html2pdf->pdf->SetDisplayMode('real');
         $html2pdf->writeHTML($html);
-        $html2pdf->Output(__DIR__ . '/Billet/Billet.pdf', 'F');
+        $html2pdf->Output('/home/sylvestrqw/wwwlouvre/louvreProject/src/LouvreBundle/Billet/Billet.pdf', 'F');
     }
 
 }
