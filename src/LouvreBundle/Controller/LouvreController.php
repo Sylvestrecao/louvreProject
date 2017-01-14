@@ -40,6 +40,7 @@ class LouvreController extends Controller
     
     public function indexAction()
     {
+        var_dump(__DIR__);
         return $this->render('LouvreBundle:Louvre:index.html.twig');
     }
 
