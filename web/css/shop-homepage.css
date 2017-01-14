@@ -75,7 +75,9 @@ fieldset{
 .retour{
     clear: both;
 }
-
+.panier-cart {
+    transform: scale(-1, 1);
+}
 
 @media (max-width: 992px) {
     #panier

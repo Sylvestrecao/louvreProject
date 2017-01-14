@@ -240,8 +240,8 @@ class LouvreController extends Controller
 
         $response = $gateway->purchase(
             array(
-                'cancelUrl'=>'http://louvrefrance.esy.es/web/coordonnees',
-                'returnUrl'=>'http://louvrefrance.esy.es/web/paiement_success',
+                'cancelUrl'=>'http://www.louvre.sylvestre-cao.fr/coordonnees',
+                'returnUrl'=>'http://www.louvre.sylvestre-cao.fr/paiement_success',
                 'description'=>'TEST VENTE',
                 'amount'=> $montant,
                 'currency'=>'EUR'
