@@ -7,7 +7,7 @@
             <li><a href="{{ path('louvre_homepage') }}"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
             <li><a href="{{ path('louvre_billeterie') }}"><span class="glyphicon glyphicon-list-alt"></span> Sélection du billet</a></li>
             <li><a href="{{ path('louvre_detail', { id : produit.id }) }}"><span class="glyphicon glyphicon-pencil"></span> Informations complémentaires</a></li>
-            <li><a href="{{ path('louvre_panier') }}"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a></li>
+            <li><a href="{{ path('louvre_panier') }}"><span class="glyphicon glyphicon-shopping-cart panier-cart"></span> Panier</a></li>
             <li><a href="{{ path('louvre_coordonnees') }}"><span class="glyphicon glyphicon-user"></span> Coordonnées</a></li>
             <li class="active"><span class="glyphicon glyphicon-euro"></span> Moyen de paiement</li>
         </ul>
@@ -16,7 +16,7 @@
             <div class="col-md-6">
                 <div class="panel panel-warning">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-center"><span class="glyphicon glyphicon-shopping-cart"></span> Votre Panier</h3>
+                        <h3 class="panel-title text-center"><span class="glyphicon glyphicon-shopping-cart panier-cart"></span> Votre Panier</h3>
                     </div>
                     <div class="panel-body text-center">
                         <p class="text-info" style="text-decoration: underline;">Musée du Louvre</p>
