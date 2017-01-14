@@ -19,12 +19,12 @@ class BirthdayValidator extends ConstraintValidator
         $tarif_id = $panier['produit_id'];
 
         $age = $value->getBirthday();
-
-        if($tarif_id == 6 && $age <= $value->isTwelve()){}
-        elseif($tarif_id == 7 && $age >= $value->isTwelve() && $age <= $value->isFour()){}
-        elseif($tarif_id == 8 && $age <= $value->isSixty()){}
-        elseif($tarif_id == 9 && $age <= $value->isSixteen()){}
-        elseif($tarif_id == 10 && $age <= $value->isEighteen()){}
+       
+        if($tarif_id == 1 && $age <= $value->isTwelve()){}
+        elseif($tarif_id == 2 && $age >= $value->isTwelve() && $age <= $value->isFour()){}
+        elseif($tarif_id == 3 && $age <= $value->isSixty()){}
+        elseif($tarif_id == 4 && $age <= $value->isSixteen()){}
+        elseif($tarif_id == 5 && $age <= $value->isEighteen()){}
         else
         {
             $this->context->addViolation($constraint->message);
