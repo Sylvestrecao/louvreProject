@@ -90,7 +90,6 @@ class LouvreController extends Controller
             $session->set('panier',$panier);
             return $this->redirectToRoute('louvre_ajouter', array('id' => $produit->getId()));
         }
-
         return $this->render('LouvreBundle:Louvre:detail.html.twig', array(
             'form'    => $form->createView(),
             'produit' => $produit
@@ -164,6 +163,7 @@ class LouvreController extends Controller
             
            return $this->redirectToRoute('louvre_select_paiement');
         }
+
         return $this->render('LouvreBundle:Louvre:coordonnees.html.twig', array(
             'form'    => $form->createView(),
             'produit' => $produit,

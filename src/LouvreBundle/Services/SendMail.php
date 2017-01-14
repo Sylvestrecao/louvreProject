@@ -24,9 +24,9 @@ class SendMail
         $panier = $session->get('panier');
         
         $message = Swift_Message::newInstance()
-            ->attach(Swift_Attachment::fromPath('/home/u525241785/public_html/src/LouvreBundle/Billet/Billet.pdf'))
+            ->attach(Swift_Attachment::fromPath('/sylvestrqw/wwwlouvre/louvreProject/src/LouvreBundle/Billet/Billet.pdf'))
             ->setSubject('Votre billet de visite')
-            ->setFrom('louvre@louvrefrance.esy.es')
+            ->setFrom('louvre@sylvestre-cao.fr')
             ->setTo($panier['email'])
             ->setBody($this->templating->render('LouvreBundle:Louvre:mail.html.twig', array('panier' => $panier)),
                 'text/html'

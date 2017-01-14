@@ -19,7 +19,7 @@ class BirthdayValidator extends ConstraintValidator
         $tarif_id = $panier['produit_id'];
 
         $age = $value->getBirthday();
-
+       
         if($tarif_id == 1 && $age <= $value->isTwelve()){}
         elseif($tarif_id == 2 && $age >= $value->isTwelve() && $age <= $value->isFour()){}
         elseif($tarif_id == 3 && $age <= $value->isSixty()){}
