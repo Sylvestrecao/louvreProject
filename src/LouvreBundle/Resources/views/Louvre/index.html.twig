@@ -1,46 +1,329 @@
 {% extends "::layout/layout.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/slider-pro.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/css/animate.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" >
+{% endblock %}
+
 {% block body %}
 <!-- Page Content -->
-<div class="container">
-    <h1 class="text-center">Bienvenue au Musée du Louvre</h1>
-    <div class="row">
-        <div class="col-md-12">
+    <section class="slider-pro slider" id="slider">
+        <div class="sp-slides">
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div>
 
-            <div class="row carousel-holder">
+                <img class="sp-image" src="{{ asset('images/slider/louvre-carrousel-eugene-delacroix-portrait-de-george-sand-detail.jpg') }}" alt="Slider 1"/>
 
-                <div class="col-md-12">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img class="slide-image" src="{{ asset('img/louvre1.jpg') }}" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="slide-image" src="{{ asset('img/louvre2.jpg') }}" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="slide-image" src="{{ asset('img/louvre3.jpg') }}" alt="">
-                            </div>
+                <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts">Eugène Delacroix et George Sand</span>
+                </h1>
+
+                <p class="sp-layer"
+                   data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
+                    Une amitié picturale et littéraire. Du 23 septembre 2016 au 27 février 2017.
+                </p>
+            </div>
+            <!-- Slides End -->
+
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div>
+                <img class="sp-image" src="{{ asset('images/slider/louvre-carrousel-johann-michael-rottmayr-triomphe-de-la-vierge-immaculee-detail.jpg') }}" alt="Slider 2"/>
+
+                <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts">Geste baroque</span>
+                </h1>
+
+                <p class="sp-layer"
+                   data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
+                    Collections de Salzbourg. Du 20 octobre 2016 au 16 janvier 2017.
+                </p>
+            </div>
+            <!-- Slides End -->
+
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div>
+
+                <img class="sp-image" src="{{ asset('images/slider/louvre-carrousel-le-mastaba-d-akhethetep.jpg') }}" alt="Slider 3"/>
+
+                <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts">Tous mécènes ! Tous archéologues…</span>
+                </h1>
+
+                <p class="sp-layer"
+                   data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
+                    Aidez le Louvre à reconstituer le mastaba d'Akhethétep
+                </p>
+            </div>
+            <!-- Slides End -->
+        </div>
+    </section>
+    <!-- Main Slider End -->
+
+    <section id="about" class="about-sec section-wrapper description">
+        <div class="container">
+            <div class="row">
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                    <h2><span class="highlight-text">À propos</span></h2>
+
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Le musée du Louvre est un musée d'art et d'antiquités situé au centre de Paris dans le palais du Louvre. Il est le plus grand des musées d'art du monde par sa surface d'exposition de 72 735 m². Ses collections comprennent près de 460 000 œuvres. Celles-ci présentent l'art occidental du Moyen Âge à 1848, ceux des civilisations antiques qui l'ont précédé et influencé (orientales, égyptienne, grecque, étrusque et romaine), et les arts des premiers chrétiens et de l'Islam.</p>
+                </div>
+                <!-- Section Header End -->
+
+                <div class="col-md-6 col-sm-6 col-xs-12 custom-sec-img wow fadeInDown">
+                    <img src="{{ asset('images/Eugène_Delacroix-La_liberté_guidant_le_peuple.jpg') }}" alt="Custom Image">
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 customized-text wow fadeInDown black-ed">
+                    <p>Le département des Peintures compte à ce jour environ 7 500 tableaux (dont 3 400 sont exposés)139, couvrant une période qui va du Moyen Âge jusqu'à 1848 (date du début de la Deuxième République). En incluant les dépôts, la collection est, avec 12 660 œuvres, la plus importante collection de peintures anciennes au monde. À de rares exceptions près, les œuvres postérieures à 1848 ont été transférées au musée d'Orsay lors de sa création en 1986.</p>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <strong>La Liberté guidant le peuple de Eugène Delacroix</strong>
+                            <p>La Liberté guidant le peuple est une huile sur toile d'Eugène Delacroix réalisée en 1830, inspirée de la révolution des Trois Glorieuses qui s'est passée en 1830. Présentée au public au Salon de Paris de 1831 sous le titre Scènes de barricades, l'œuvre est ensuite exposée au musée du Luxembourg à partir de 1863 puis transférée au musée du Louvre en 1874 où elle fut l'une des œuvres les plus fréquentées. L'œuvre a été présentée dans l'exposition La Galerie du temps au Louvre-Lens.
+                                Par son aspect allégorique et sa portée politique, elle a été fréquemment choisie comme symbole de la République française ou de la démocratie.</p>
                         </div>
-                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section id="portfolio" class="bgSection portfolio-section">
+        <div class="container">
+            <div class="row">
+
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                    <h2><span class="highlight-text">Gallery</span></h2>
+
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
+                </div>
+                <!-- Section Header End -->
+
+            </div>
         </div>
 
-    </div>
+        <!-- Works -->
+        <div class="portfolio-works wow fadeIn" data-wow-duration="2s">
+            <!-- Filter Button Start -->
+            <div id="portfolio-filter" class="portfolio-filter-btn-group">
+                <ul>
+                    <li>
+                        <a href="#" class="selected" data-filter="*">ALL</a>
+                        <a href="#" data-filter=".web">CHINES</a>
+                        <a href="#" data-filter=".seo">CONTINENTAL</a>
+                        <a href="#" data-filter=".works">ASIAN</a>
+                        <a href="#" data-filter=".brands">EUROPEN</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Filter Button End -->
+            <div class="portfolio-items">
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item web seo">
+                    <img src="{{ asset('images/img-portfolio/portfolio1.jpg') }}" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="{{ asset('images/img-portfolio/portfolio1.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item works seo">
+                    <img src="images/img-portfolio/portfolio2.jpg" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="images/img-portfolio/portfolio2.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item web">
+                    <img src="images/img-portfolio/portfolio3.jpg" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="images/img-portfolio/portfolio3.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item web works brands">
+                    <img src="images/img-portfolio/portfolio4.jpg" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="images/img-portfolio/portfolio4.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items -->
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item web brands">
+                    <img src="images/img-portfolio/portfolio5.jpg" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="images/img-portfolio/portfolio5.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item works seo">
+                    <img src="images/img-portfolio/portfolio6.jpg" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="images/img-portfolio/portfolio6.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+                <div class="item portfolio-item brands seo">
+                    <img src="images/img-portfolio/portfolio1.jpg" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="images/img-portfolio/portfolio7.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item web seo works">
+                    <img src="images/img-portfolio/portfolio2.jpg" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="images/img-portfolio/portfolio8.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+            </div>
+        </div>
+        <!-- Works End -->
+    </section>
+    <!-- Portfolio Section End -->
 
-</div>
-<!-- /.container -->
+
+    <section id="info" class="info-section">
+        <div class="container text-xs-center">
+            <!-- Section Header -->
+            <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                <h2><span class="highlight-text">Le Musée du Louvre en quelques chiffres</span></h2>
+
+                <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Le musée a été inaugurée en 1793. Avec environ neuf millions de visiteurs annuels (depuis 2011), le Louvre est le musée le plus visité au monde, et le site culturel payant le plus visité de France. Parmi ses pièces les plus célèbres figurent La Joconde, la Vénus de Milo, Le Scribe accroupi, La Victoire de Samothrace et le Code de Hammurabi.</p>
+            </div>
+            <!-- Section Header End -->
+            <div class="row wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center">
+                    <i class="icon_mic_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
+                    <h4>Nombre d’œuvres</h4>
+                    <h1 class="text-primary">554 498</h1>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center">
+                    <i class="icon_gift_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
+                    <h4>Superficie</h4>
+                    <h1 class="text-primary">210 000 m2</h1>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center">
+                    <i class="icon_lightbulb_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
+                    <h4>Nombre de visiteurs/an</h4>
+                    <h1 class="text-primary">9 millions</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients-section">
+        <!-- Container Ends -->
+        <div class="container">
+            <div class="row">
+                <!-- Section Header -->
+                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
+                    <h2><span class="highlight-text">Vos témoignages</span></h2>
+                </div>
+                <!-- Section Header End -->
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="testimonials">
+                            <div class="active item">
+                                <blockquote><p>Denim you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+                                <div class="carousel-info">
+                                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left">
+                                    <div class="pull-left">
+                                        <span class="testimonials-name">Lina Mars</span>
+                                        <span class="testimonials-post">Commercial Director</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Container Ends -->
+    </section>
+    <!-- Client Section End -->
+    <!-- /.container -->
 {% endblock %}
 
+{% block javascripts %}
+    <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.easypiechart.js') }}"></script>
+    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.fitvids.js') }}"></script>
+    <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.nav.js') }}"></script>
+    <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/smooth-scroll.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.sliderPro.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
+{% endblock %}

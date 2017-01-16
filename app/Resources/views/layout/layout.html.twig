@@ -1,86 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Musée du Louvre">
+    <meta name="Author" content="WebThemez">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
     <title>{% block title %}Musée du Louvre{% endblock %}</title>
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" >
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-flaty.min.css') }}" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/shop-homepage.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" />
     {% block stylesheets %}{% endblock %}
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="{{ asset('js/html5shiv.min.js') }}"></script>
+    <script src="{{ asset('js/respond.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/selectivizr.js') }}"></script>
     <![endif]-->
-
 </head>
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ path('louvre_homepage') }}">Louvre</a>
-        </div>
-        
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="{{ path('louvre_homepage') }}">Accueil</a>
-                </li>
-                <li>
-                    <a href="{{ path('louvre_horaires') }}">Horaires et tarifs</a>
-                </li>
-                <li>
-                    <a href="{{ path('louvre_billeterie') }}">Billeterie</a>
-                </li>
-                <li>
-                    <a href="{{ path('louvre_contact') }}">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
+<!-- Header End -->
+<header>
+    <!-- Navigation Menu start-->
+    {% if app.request.get('_route') == 'louvre_homepage' %}
+        <nav id="topNav" class="navbar navbar-default main-menu">
+            <div class="container">
+                <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                    ☰
+                </button>
+                <a class="navbar-brand page-scroll" href="{{ path('louvre_homepage') }}">
+                    <img class="logo" id="logo" src="{{ asset('images/logo-louvre.jpg') }}" alt="logo">
+                </a>
+                <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#slider">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="#about">À propos</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Galerie</a>
+                        </li>
+                        <li>
+                            <a href="#info">Résumé</a>
+                        </li>
+                        <li>
+                            <a href="#clients">Témoignages</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('louvre_billeterie') }}">Billeterie</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% else %}
+        <nav id="" class="navbar navbar-default">
+            <div class="container">
+                <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                    ☰
+                </button>
+                <a class="navbar-brand page-scroll" href="{{ path('louvre_homepage') }}">
+                    <img class="logo" id="logo" src="{{ asset('images/logo-louvre.jpg') }}" alt="logo">
+                </a>
+                <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="{{ path('louvre_homepage') }}">Accueil</a>
+                        </li>
+                        <li class="active">
+                            <a href="#slider">Billeterie</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% endif %}
+
+</header>
+<!-- Header End -->
+
 {% block body %}{% endblock %}
-<div class="container">
-    <hr>
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Musée du Louvre 2016</p>
+<section class="footer-container" style="margin-top: 50px;">
+    <div class="container">
+        <div class="row footer-containertent">
+            <div class="col-md-6" style="text-align: center;">
+                <h4>Informations pratiques</h4>
+                <p>Horaires : Ouvert tous les jours de 9h à 18h sauf le mardi</p>
+                <p>Nocturnes jusqu’à 21h45 le mercredi et le vendredi</p>
+                <p>Fermetures : Les 1er mai et 25 décembre</p>
+            </div>
+            <div class="col-md-6 contac-us" style="text-align: center;">
+                <h4>Nous contacter</h4>
+                <ul>
+                    <li><i class="fa fa-home"></i>99 rue de Rivoli, 75001 Paris</li>
+                    <li><i class="fa fa-phone"></i>01 40 20 50 50</li>
+                    <li><i class="fa fa-envelope-o"></i>info@louvre.fr</li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-</div>
-<!-- /.container -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="footer-containertent">
+                <ul class="footer-social-info">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </li>
+                </ul>
+                <br/><br/>
+                <p>Copyright © 2018. Template by: <a href="http://webthemez.com/free-bootstrap-templates/">WebThemez</a>, All rights reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+    <script src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/modernizr.min.js') }}"></script>
 {% block javascripts %}{% endblock %}
 
 
