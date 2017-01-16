@@ -7,48 +7,33 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 class LouvreControllerTest extends WebTestCase
 {
 
-    public function testContact()
-    {
+    public function testTitle(){
         $client = static::createClient();
-
-        $crawler = $client->request('GET', '/contact');
-
-        $this->assertEquals(1, $crawler->filter('h2:contains("Nous contacter")')->count());
+        $crawler = $client->request('GET', '/');
+        $this->assertCount(3, $crawler->filter('h2'));
     }
 
-   /* public function testForm()
-    {
+    public function testMainTitle(){
         $client = static::createClient();
-        $crawler = $client->request('POST','/coordonnees');
+        $crawler = $client->request('GET', '/');
+        $this->assertGreaterThan(0, $crawler->filter('h1')->count());
+    }
 
-        $buttonCrawlerNode = $crawler->selectButton('clients_Valider');
-        $form = $buttonCrawlerNode->form();
-
-        $client->submit($form, array(
-            'clients[nom]'       => 'John',
-            'clients[prenom]'    => 'Doe',
-            'clients[pays]'      => '5',
-            'clients[birthday]'  => '11/08/1998',
-            'clients[mail]'      => 'john@doe.com'
-        ));
-    }*/
-
-    public function testSendMail()
-    {
+    public function testClick(){
         $client = static::createClient();
-        $crawler = $client->request('POST','/contact');
-
-        $buttonCrawlerNode = $crawler->selectButton('contact_mail');
-        $form = $buttonCrawlerNode->form();
-
-        $client->submit($form);
+        $crawler = $client->request('GET', '/billeterie');
+        $link = $crawler
+            ->filter('a') // find all links with the text "Greet"
+            ->link()
+        ;
+        $crawler = $client->click($link);
     }
 
     public function testContent()
     {
         $client = static::createClient();
-        $client->request('GET', '/');
-        $this->assertContains('foo', $client->getResponse()->getContent());
+        $client->request('GET', '/billeterie');
+        $this->assertContains('Billeterie', $client->getResponse()->getContent());
     }
 
     public function test200All()
@@ -64,49 +49,6 @@ class LouvreControllerTest extends WebTestCase
         $client->request('GET', '/randompage');
         $this->assertTrue($client->getResponse()->isNotFound());
     }
-
-    public function test200()
-    {
-        $client = static::createClient();
-        $client->request('GET', '/contact');
-        $this->assertEquals(
-            200, // or Symfony\Component\HttpFoundation\Response::HTTP_OK
-            $client->getResponse()->getStatusCode()
-        );
-    }
-
-    /*public function testRedirect()
-    {
-        $client = static::createClient();
-        $client->request('GET', '/panier');
-        $this->assertTrue(
-            $client->getResponse()->isRedirect('/')
-        );
-    }*/
-    /**
-     * @dataProvider urlProvider
-     */
-    public function testPageIsSuccessful($url)
-    {
-        $client = self::createClient();
-        $client->request('GET', $url);
-
-        $this->assertTrue($client->getResponse()->isSuccessful());
-    }
-
-    public function urlProvider()
-    {
-        return array(
-            array('/'),
-            array('/horaires'),
-            array('/tarif'),
-            //array('/billeterie'),
-            //array('/pdf/{token}'),
-            //array('/panier'),
-            //array('/coordonnees'),
-            //array('/paiement'),
-            array('/contact'),
-        );
-    }
+    
 
 }

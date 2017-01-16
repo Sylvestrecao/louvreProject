@@ -209,6 +209,9 @@ class LouvreController extends Controller
                 return $this->redirectToRoute('louvre_billeterie');
             } 
         }
+        else{
+            return $this->redirectToRoute('louvre_homepage');
+        }
         return $this->render('LouvreBundle:Louvre:index.html.twig');
     }
 
