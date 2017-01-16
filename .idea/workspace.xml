@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cc146bf-fbfd-4d86-82e7-99b636bd896c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/facebook-logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/louvre-logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/louvre1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/louvre2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/louvre3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/paypal-logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/stripe-logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/twitter-logo.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/layout/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/layout/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LouvreBundle/Controller/LouvreController.php" afterPath="$PROJECT_DIR$/src/LouvreBundle/Controller/LouvreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdf.html.twig" afterPath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdf.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdfmail.html.twig" afterPath="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdfmail.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/shop-homepage.css" afterPath="$PROJECT_DIR$/web/css/shop-homepage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
     </list>
     <ignored path="louvreProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,16 +46,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="607" column="19" selection-start-line="607" selection-start-column="19" selection-end-line="607" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mail.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/mail.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,13 +76,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop-homepage.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shop-homepage.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/css/shop-homepage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="75" column="127" selection-start-line="75" selection-start-column="127" selection-end-line="75" selection-end-column="127" />
+            <state relative-caret-position="357">
+              <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
               <folding>
-                <marker date="1484567969722" expanded="true" signature="5:7" placeholder="{...}" />
+                <marker date="1484568257977" expanded="true" signature="5:7" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -149,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdfmail.html.twig" />
         <option value="$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdf.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/layout/layout.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/shop-homepage.css" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/web/css/shop-homepage.css" />
       </list>
     </option>
   </component>
@@ -514,12 +491,12 @@
       <workItem from="1484234242552" duration="3908000" />
       <workItem from="1484391167068" duration="18336000" />
       <workItem from="1484426467916" duration="6048000" />
-      <workItem from="1484553156057" duration="6404000" />
+      <workItem from="1484553156057" duration="6647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34696000" />
+    <option name="totallyTimeSpent" value="34939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -904,16 +881,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/shop-homepage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="75" column="127" selection-start-line="75" selection-start-column="127" selection-end-line="75" selection-end-column="127" />
-          <folding>
-            <marker date="1484567969722" expanded="true" signature="5:7" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LouvreBundle/Resources/views/Louvre/pdfmail.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -940,6 +907,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="607" column="19" selection-start-line="607" selection-start-column="19" selection-end-line="607" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/layout/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -948,11 +923,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+    <entry file="file://$PROJECT_DIR$/web/css/shop-homepage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="607" column="19" selection-start-line="607" selection-start-column="19" selection-end-line="607" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+          <folding>
+            <marker date="1484568257977" expanded="true" signature="5:7" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
