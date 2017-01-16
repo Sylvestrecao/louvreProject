@@ -74,6 +74,8 @@ fieldset{
 
 .background-custom{
     background-image: url("../images/slider/louvre-carrousel-johann-michael-rottmayr-triomphe-de-la-vierge-immaculee-detail.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 @media (max-width: 992px) {
     #panier
