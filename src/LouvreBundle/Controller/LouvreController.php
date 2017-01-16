@@ -10,8 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Omnipay\Omnipay;
-use Swift_Message;
-use Swift_Attachment;
+
 class LouvreController extends Controller
 {
     public function pdfAction(Request $request, $token)
@@ -41,16 +40,6 @@ class LouvreController extends Controller
     public function indexAction()
     {
         return $this->render('LouvreBundle:Louvre:index.html.twig');
-    }
-
-    public function horairesAction()
-    {
-        return $this->render('LouvreBundle:Louvre:horaires.html.twig');
-    }
-
-    public function tarifAction()
-    {
-        return $this->render('LouvreBundle:Louvre:tarif.html.twig');
     }
 
     public function billeterieAction(Request $request)
@@ -291,10 +280,5 @@ class LouvreController extends Controller
             return $this->render('LouvreBundle:Louvre:paiement.html.twig', array('panier' => $panier));
         }
         return $this->render('LouvreBundle:Louvre:index.html.twig');
-    }
-    
-    public function contactAction()
-    {
-      return $this->render('LouvreBundle:Louvre:contact.html.twig');
     }
 }
