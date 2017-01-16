@@ -2,14 +2,6 @@ louvre_homepage:
     path:     /
     defaults: { _controller: LouvreBundle:Louvre:index }
 
-louvre_horaires:
-    path:     /horaires
-    defaults: { _controller: LouvreBundle:Louvre:horaires }
-
-louvre_tarif:
-    path:     /tarif
-    defaults: { _controller: LouvreBundle:Louvre:tarif }
-
 louvre_billeterie:
     path:     /billeterie
     defaults: { _controller: LouvreBundle:Louvre:billeterie }
@@ -17,7 +9,6 @@ louvre_billeterie:
 louvre_detail:
     path:     /detail/{id}
     defaults: { _controller: LouvreBundle:Louvre:detail }
-
 
 louvre_ajouter:
     path:     /ajouter/{id}
@@ -47,10 +38,6 @@ louvre_success_paiement:
     path:     /paiement_success
     defaults: { _controller: LouvreBundle:Louvre:success }
 
-
-louvre_contact:
-    path:     /contact
-    defaults: { _controller: LouvreBundle:Louvre:contact }
 
 louvre_pdf:
     path:     /pdf/{token}
