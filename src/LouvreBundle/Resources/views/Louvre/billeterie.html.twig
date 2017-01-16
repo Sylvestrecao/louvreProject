@@ -9,9 +9,11 @@
     <div class="container">
         <h1>Billeterie Musée du Louvre</h1>
         {% for produit in produits %}
-        <div class="col-md-5 produits">
-            <a href="{{ path('louvre_detail', { id : produit.id }) }}"><h3>{{ produit.description }}</h3></a>
-        </div>
+         <a href="{{ path('louvre_detail', { id : produit.id }) }}">
+            <div class="col-md-5 produits">
+               <h3>{{ produit.description }}</h3>
+            </div>
+         </a>
         {% endfor %}
 
     </div>
