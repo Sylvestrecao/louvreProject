@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-xs-6 text-center">
                                 <p>Je payes avec Paypal</p>
-                                <img src="{{ asset('img/paypal-logo.jpg') }}" style="margin-bottom: 10%;"/>
+                                <img src="{{ asset('images/paypal-logo.jpg') }}" style="margin-bottom: 10%;"/>
                                 <div style="clear: both;"></div>
                                 <a href="{{ path('louvre_paiement') }}" class="stripe-button-el">
                                     <span style="display: block; min-height: 30px;">Payer avec Paypal</span>
@@ -50,11 +50,11 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-xs-6 text-center">
                               <p>Je payes avec Stripe</p>
-                                <img src="{{ asset('img/stripe-logo.jpg') }}" style="margin-bottom: 10%;"/>
+                                <img src="{{ asset('images/stripe-logo.jpg') }}" style="margin-bottom: 10%;"/>
                                 <form action="{{ path('louvre_success_paiement_stripe') }}" method="POST">
                                     <script
                                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                            data-image="http://www.louvre.sylvestre-cao.fr/web/img/louvre-logo.jpg"
+                                            data-image="http://www.louvre.sylvestre-cao.fr/web/images/logo-louvre.jpg"
                                             data-description="Billet de visite du Louvre"
                                             data-key="pk_test_XSkH5Blvqmzhz9Ut0CXPmczX"
                                             data-locale="fr"
