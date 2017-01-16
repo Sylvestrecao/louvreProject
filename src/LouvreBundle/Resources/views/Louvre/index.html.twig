@@ -102,15 +102,13 @@
     <section id="portfolio" class="bgSection portfolio-section">
         <div class="container">
             <div class="row">
-
                 <!-- Section Header -->
                 <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                    <h2><span class="highlight-text">Gallery</span></h2>
+                    <h2><span class="highlight-text">Galerie</span></h2>
 
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Retrouver ici une courte galerie d'images des oeuvres du Louvre.</p>
                 </div>
                 <!-- Section Header End -->
-
             </div>
         </div>
 
@@ -120,38 +118,24 @@
             <div id="portfolio-filter" class="portfolio-filter-btn-group">
                 <ul>
                     <li>
-                        <a href="#" class="selected" data-filter="*">ALL</a>
-                        <a href="#" data-filter=".web">CHINES</a>
-                        <a href="#" data-filter=".seo">CONTINENTAL</a>
-                        <a href="#" data-filter=".works">ASIAN</a>
-                        <a href="#" data-filter=".brands">EUROPEN</a>
+                        <a href="#" class="selected" data-filter="*">Tous</a>
+                        <a href="#" data-filter=".web">Peintures</a>
+                        <a href="#" data-filter=".seo">Antiquités égyptiennes</a>
+                        <a href="#" data-filter=".works">Sculptures</a>
+                        <a href="#" data-filter=".brands">Arts graphiques</a>
                     </li>
                 </ul>
             </div>
             <!-- Filter Button End -->
             <div class="portfolio-items">
                 <!-- Portfolio Items -->
-                <div class="item portfolio-item web seo">
-                    <img src="{{ asset('images/img-portfolio/portfolio1.jpg') }}" alt="">
+                <div class="item portfolio-item web">
+                    <img src="{{ asset('images/sacre-napo.jpg') }}" alt="">
                     <div class="portfolio-details-wrapper">
                         <div class="portfolio-details">
                             <div class="portfolio-meta-btn">
                                 <ul class="work-meta">
-                                    <li class="lighbox"><a href="{{ asset('images/img-portfolio/portfolio1.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio Items End -->
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item works seo">
-                    <img src="images/img-portfolio/portfolio2.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio2.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                    <li class="lighbox"><a href="{{ asset('images/sacre-napo.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -160,12 +144,12 @@
                 <!-- Portfolio Items End -->
                 <!-- Portfolio Items -->
                 <div class="item portfolio-item web">
-                    <img src="images/img-portfolio/portfolio3.jpg" alt="">
+                    <img src="{{ asset('images/noce-cana.jpg') }}" alt="">
                     <div class="portfolio-details-wrapper">
                         <div class="portfolio-details">
                             <div class="portfolio-meta-btn">
                                 <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio3.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                    <li class="lighbox"><a href="{{ asset('images/noce-cana.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -173,27 +157,13 @@
                 </div>
                 <!-- Portfolio Items End -->
                 <!-- Portfolio Items -->
-                <div class="item portfolio-item web works brands">
-                    <img src="images/img-portfolio/portfolio4.jpg" alt="">
+                <div class="item portfolio-item web">
+                    <img src="{{ asset('images/radeau-meduse.jpg') }}" alt="">
                     <div class="portfolio-details-wrapper">
                         <div class="portfolio-details">
                             <div class="portfolio-meta-btn">
                                 <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio4.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio Items -->
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item web brands">
-                    <img src="images/img-portfolio/portfolio5.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio5.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                    <li class="lighbox"><a href="{{ asset('images/radeau-meduse.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -201,26 +171,39 @@
                 </div>
                 <!-- Portfolio Items End -->
                 <!-- Portfolio Items -->
-                <div class="item portfolio-item works seo">
-                    <img src="images/img-portfolio/portfolio6.jpg" alt="">
+                <div class="item portfolio-item seo">
+                    <img src="{{ asset('images/stele-taperet.jpg') }}" alt="">
                     <div class="portfolio-details-wrapper">
                         <div class="portfolio-details">
                             <div class="portfolio-meta-btn">
                                 <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio6.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                    <li class="lighbox"><a href="{{ asset('images/stele-taperet.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Portfolio Items End -->
-                <div class="item portfolio-item brands seo">
-                    <img src="images/img-portfolio/portfolio1.jpg" alt="">
+                <!-- Portfolio Items -->
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item seo">
+                    <img src="{{ asset('images/momie-cartonnages.jpg') }}" alt="">
                     <div class="portfolio-details-wrapper">
                         <div class="portfolio-details">
                             <div class="portfolio-meta-btn">
                                 <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio7.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                    <li class="lighbox"><a href="{{ asset('images/momie-cartonnages.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item portfolio-item seo">
+                    <img src="{{ asset('images/ramses.jpg') }}" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="{{ asset('images/ramses.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -228,13 +211,52 @@
                 </div>
                 <!-- Portfolio Items End -->
                 <!-- Portfolio Items -->
-                <div class="item portfolio-item web seo works">
-                    <img src="images/img-portfolio/portfolio2.jpg" alt="">
+                <div class="item portfolio-item works">
+                    <img src="{{ asset('images/milon.jpg') }}" alt="">
                     <div class="portfolio-details-wrapper">
                         <div class="portfolio-details">
                             <div class="portfolio-meta-btn">
                                 <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio8.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                    <li class="lighbox"><a href="{{ asset('images/milon.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+                <div class="item portfolio-item works">
+                    <img src="{{ asset('images/psychee.jpg') }}" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="{{ asset('images/psychee.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Items End -->
+                <!-- Portfolio Items -->
+                <div class="item portfolio-item brands">
+                    <img src="{{ asset('images/Leonidas.jpg') }}" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="{{ asset('images/Leonidas.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item portfolio-item brands">
+                    <img src="{{ asset('images/diane-chasseresse.jpg') }}" alt="">
+                    <div class="portfolio-details-wrapper">
+                        <div class="portfolio-details">
+                            <div class="portfolio-meta-btn">
+                                <ul class="work-meta">
+                                    <li class="lighbox"><a href="{{ asset('images/diane-chasseresse.jpg') }}" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -259,54 +281,23 @@
             <!-- Section Header End -->
             <div class="row wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                 <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center">
-                    <i class="icon_mic_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
+                    <img src="{{ asset('images/painting.png') }}" alt="icone oeuvre"/>
                     <h4>Nombre d’œuvres</h4>
                     <h1 class="text-primary">554 498</h1>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center">
-                    <i class="icon_gift_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
+                    <img src="{{ asset('images/bank-building.png') }}" alt="icone bâtiment"/>
                     <h4>Superficie</h4>
                     <h1 class="text-primary">210 000 m2</h1>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center">
-                    <i class="icon_lightbulb_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
+                    <img src="{{ asset('images/business-card.png') }}" alt="icone visiteur"/>
                     <h4>Nombre de visiteurs/an</h4>
                     <h1 class="text-primary">9 millions</h1>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients-section">
-        <!-- Container Ends -->
-        <div class="container">
-            <div class="row">
-                <!-- Section Header -->
-                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                    <h2><span class="highlight-text">Vos témoignages</span></h2>
-                </div>
-                <!-- Section Header End -->
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="testimonials">
-                            <div class="active item">
-                                <blockquote><p>Denim you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
-                                <div class="carousel-info">
-                                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left">
-                                    <div class="pull-left">
-                                        <span class="testimonials-name">Lina Mars</span>
-                                        <span class="testimonials-post">Commercial Director</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- Container Ends -->
-    </section>
-    <!-- Client Section End -->
     <!-- /.container -->
 {% endblock %}
 
