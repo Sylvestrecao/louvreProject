@@ -12,10 +12,6 @@ matrix:
   allow_failures:
     - php: hhvm
 
-# Define an environment variable
-env:
-  - SYMFONY_VERSION="3.0.*" DB=mysql
-
 # Update composer
 before-install:
   - composer self-update
@@ -30,4 +26,4 @@ install:
 
 # Run script
 script:
-  - phpunit
+  - phpunit tests
