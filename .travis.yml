@@ -1,14 +1,5 @@
 language: php
 
-before-install:
-  - composer self-update
-
-install:
-  - composer install
-
-script:
-  - phpunit
-
 # Matrix to test in every php version
 matrix:
   # Fast finish allows to set the build as "finished" even if the "allow_failures" matrix elements are not finished yet.
@@ -20,3 +11,23 @@ matrix:
     - php: hhvm
   allow_failures:
     - php: hhvm
+
+# Define an environment variable
+env:
+  - SYMFONY_VERSION="3.0.*" DB=mysql
+
+# Update composer
+before-install:
+  - composer self-update
+
+# Install composer dependencies,
+# Create database, schema and fixtures
+install:
+  - composer install
+  - php bin/console doctrine:database:create --env=test
+  - php bin/console doctrine:schema:create --env=test
+  - php bin/console doctrine:fixtures:load -n --env=test
+
+# Run script
+script:
+  - phpunit
