@@ -23,7 +23,7 @@ class LouvreControllerTest extends WebTestCase
         $client = static::createClient();
         $crawler = $client->request('GET', '/billeterie');
         $link = $crawler
-            ->filter('a') // find all links with the text "Greet"
+            ->filter('a') 
             ->link()
         ;
         $crawler = $client->click($link);
