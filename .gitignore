@@ -3,6 +3,6 @@
 /phpunit.xml
 /web/bundles/
 app/bootstrap.php.cache
-app/config/config.yml
+
 app/config/parameters.yml
-src/LouvreBundle/Billet
+src/LouvreBundle/Billet/*
