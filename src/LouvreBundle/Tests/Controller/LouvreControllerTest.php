@@ -19,6 +19,11 @@ class LouvreControllerTest extends WebTestCase
         $this->assertGreaterThan(0, $crawler->filter('h1')->count());
     }
 
+    public function testImages(){
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/');
+        $this->assertGreaterThan(0, $crawler->filter('img')->count());
+    }
     public function testClick(){
         $client = static::createClient();
         $crawler = $client->request('GET', '/billeterie');
