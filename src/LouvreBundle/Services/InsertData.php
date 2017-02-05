@@ -38,5 +38,6 @@ class InsertData
         $commandes->setClients($clients);
         $this->em->persist($commandes);
         $this->em->flush();
+        
     }
 }
