@@ -8,9 +8,9 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
-    paypal_password: "%paypal_password%"
-    paypal_signature: "%paypal_signature%"
-    stripe_key: "%stripe_key%"
+    paypal_password: "%p_password%"
+    paypal_signature: "%p_signature%"
+    stripe_key: "%s_key%"
 
 framework:
     #esi:             ~
