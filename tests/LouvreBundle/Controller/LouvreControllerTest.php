@@ -49,6 +49,13 @@ class LouvreControllerTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isSuccessful());
     }
 
+    public function test200()
+    {
+        $client = static::createClient();
+        $client->request('GET', '/billeterie');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
     public function test404()
     {
         $client = static::createClient();

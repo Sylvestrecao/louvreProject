@@ -28,8 +28,5 @@ class Calculator
         $result = $client->getNom();
         return $result;
     }
-
-    public function setClient(){
-     
-    }
+    
 }
