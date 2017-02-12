@@ -39,7 +39,7 @@ class LouvreControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $client->request('GET', '/billeterie');
-        $this->assertContains('Billeterie', $client->getResponse()->getContent());
+        $this->assertContains('Billetterie', $client->getResponse()->getContent());
     }
 
     public function test200All()
