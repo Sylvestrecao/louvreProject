@@ -206,7 +206,7 @@ class LouvreController extends Controller
                 return $this->render('LouvreBundle:Louvre:paiement.html.twig', array('panier' => $panier));
             }
             else{
-                return $this->redirectToRoute('louvre_billeterie');
+                return $this->redirectToRoute('louvre_homepage');
             } 
         }
         else{
@@ -232,7 +232,7 @@ class LouvreController extends Controller
 
         $response = $gateway->purchase(
             array(
-                'cancelUrl'=>'http://www.louvre.sylvestre-cao.fr/coordonnees',
+                'cancelUrl'=>'http://www.louvre.sylvestre-cao.fr/paiement_select',
                 'returnUrl'=>'http://www.louvre.sylvestre-cao.fr/paiement_success',
                 'description'=>'TEST VENTE',
                 'amount'=> $montant,
