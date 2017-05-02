@@ -206,7 +206,7 @@ class LouvreController extends Controller
                 return $this->render('LouvreBundle:Louvre:paiement.html.twig', array('panier' => $panier));
             }
             else{
-                return $this->redirectToRoute('louvre_homepage');
+                return $this->redirectToRoute('louvre_select_paiement');
             } 
         }
         else{
@@ -281,6 +281,9 @@ class LouvreController extends Controller
             $mail->sendMail($panier);
 
             return $this->render('LouvreBundle:Louvre:paiement.html.twig', array('panier' => $panier));
+        }
+        else{
+            return $this->redirectToRoute('louvre_select_paiement');
         }
         return $this->render('LouvreBundle:Louvre:index.html.twig');
     }
