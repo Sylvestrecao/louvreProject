@@ -67,4 +67,28 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
         $clientCalculator = new Calculator($entityManager);
         $this->assertEquals('John', $clientCalculator->getClient(1));
     }
+
+    public function testNewClient()
+    {
+        $client = new Clients();
+        $client->setNom('John');
+        $client->setPrenom('Doe');
+        $client->setMail('john@mail.com');
+        $client->setBirthday(new \DateTime());
+        $client->setPays('France');
+
+        $this->assertNotNull($client->getNom(), "Problem on client creation");
+    }
+
+    public function testNewCommande()
+    {
+        $commande = new Commandes();
+        $client = new Clients();
+
+        $commande->setAmount(12);
+        $commande->setClients($client);
+        $commande->setJour(new \DateTime());
+
+        $this->assertEquals(12, $commande->getAmount(), "Problem on commande creation");
+    }
 }
